@@ -41,6 +41,9 @@ public class MainActivityMealDB extends AppCompatActivity {
     private ActivityMainBinding binding;
     private ArrayList<String> mealList;
     private Handler mainHandler = new Handler();
+    private EditText input;
+    private Button btnSearch;
+    private ListView simpleList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,10 @@ public class MainActivityMealDB extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
+        input = (EditText) findViewById(R.id.txtSearch);
+        btnSearch = (Button) findViewById(R.id.btnSearch);
+        simpleList = (ListView) findViewById(R.id.txtResults);
+
         binding.btnFavourites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,11 +73,12 @@ public class MainActivityMealDB extends AppCompatActivity {
         binding.btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Button mButton;
-                EditText mEdit = (EditText) findViewById(R.id.txtSearch);
-                mEdit.getText().toString();
-
-
+                if (input.getText().toString()==null || input.getText().toString().trim().equals("")){
+                }
+                else {
+                    //ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), mealList);
+                    //simpleList.setAdapter(adapter);
+                }
             }
         });
     }
@@ -163,7 +171,6 @@ public class MainActivityMealDB extends AppCompatActivity {
                 mainHandler.post(new Runnable() {
                     @Override
                     public void run() {
-
                     }
                 });
             }

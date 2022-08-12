@@ -69,37 +69,10 @@ public class MainActivityMealDB extends AppCompatActivity {
                 Button mButton;
                 EditText mEdit = (EditText) findViewById(R.id.txtSearch);
                 mEdit.getText().toString();
+
+
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
     }
 
     //Type1     Type2   Type3
@@ -190,12 +163,7 @@ public class MainActivityMealDB extends AppCompatActivity {
                 mainHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        ListView list = findViewById(R.id.txtResults);
-                        ArrayAdapter adapter;
-                        adapter = new ArrayAdapter<String>(this,
-                                android.R.layout.simple_list_item_1, mealList);
-                        list.setAdapter(adapter);
-                        }
+
                     }
                 });
             }

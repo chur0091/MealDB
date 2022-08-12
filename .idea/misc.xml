@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/activity_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/activity_listview.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/activity_main.xml" value="0.38125" />
         <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/favourites.xml" value="0.37247474747474746" />
         <entry key="..\:/Users/hpgam/AndroidStudioProjects/MealDatabase/app/src/main/res/layout/meal_details.xml" value="0.38125" />

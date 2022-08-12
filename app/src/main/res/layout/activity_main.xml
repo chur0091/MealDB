@@ -9,10 +9,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="0dp"
-        android:layout_height="76dp"
+        android:layout_height="0dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
@@ -25,46 +26,44 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnFavourites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="54dp"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="30dp"
         android:clickable="true"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSearch"
         app:srcCompat="@drawable/heart" />
 
-    <ScrollView
-        android:id="@+id/scrollView3"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        android:layout_marginTop="63dp"
+        android:layout_marginBottom="47dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toTopOf="@+id/btnSearch">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <ListView
+            android:id="@+id/txtResults"
+            android:layout_width="384dp"
+            android:layout_height="469dp">
 
-            <ListView
-                android:id="@+id/txtResults"
-                android:layout_width="384dp"
-                android:layout_height="469dp">
-
-            </ListView>
-        </LinearLayout>
-    </ScrollView>
+        </ListView>
+    </LinearLayout>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="389dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -75,10 +74,10 @@
 
     <Button
         android:id="@+id/btnSearch"
-        android:layout_width="125dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="346dp"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="350dp"
         android:text="Search"
         app:layout_constraintBottom_toTopOf="@+id/btnFavourites"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,8 +86,9 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFavourites" />
